@@ -7,6 +7,10 @@ const app = express();
 app.get("/",(req,res) => {
   res.send("Hellos");
 })
+
+app.get("/test",(req,res) =>{
+  res.send("Test yaaaaaaaaaaaa");
+})
 app.listen(PORT,() =>{
   console.log("App is listening on "+PORT);
 });
