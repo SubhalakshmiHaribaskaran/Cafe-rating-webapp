@@ -1,5 +1,9 @@
-const value = require('express');
-const app = value();
-app.listen(4005,() =>{
-  console.log("App is listening on "+4005);
+const express = require('express');
+// value can also be writtern as express
+const dotenv = require("dotenv").config();
+const PORT = process.env.PORT;
+const app = express();
+
+app.listen(PORT,() =>{
+  console.log("App is listening on "+PORT);
 });
