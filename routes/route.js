@@ -2,12 +2,13 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/def",(req,res) => {
+router.get("/",(req,res) => {
   res.send("Hellos");
 });
-router.get("/come",(req,res) => {
-  res.send("Hello come");
-});
-
+// Creating a post request , getting value from the user and doing what we want to do
+router.post("/add", (req,res) =>{
+  console.log(req.body);
+})
+// To test this route we are using thunderclient 
 
 module.exports = router;

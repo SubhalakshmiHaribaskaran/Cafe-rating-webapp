@@ -10,7 +10,7 @@ db();
 
 // middleware
 app.use(express.json());
-app.use("/abc",require("./routes/route"));
+app.use("/",require("./routes/route"));
 
 
 app.get("/test",(req,res) =>{
