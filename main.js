@@ -10,10 +10,8 @@ db();
 
 // middleware
 app.use(express.json());
+app.use("/",require("./routes/route"));
 
-app.get("/",(req,res) => {
-  res.send("Hellos");
-})
 
 app.get("/test",(req,res) =>{
   res.send("Test yaaaaaaaaaaaa");
