@@ -8,6 +8,9 @@ const app = express();
 
 db();
 
+// middleware
+app.use(express.json());
+
 app.get("/",(req,res) => {
   res.send("Hellos");
 })
