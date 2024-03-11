@@ -3,8 +3,17 @@ const Object = require("../models/model");
 
 const router = express.Router();
 
-router.get("/",(req,res) => {
-  res.send("Hellos");
+router.get("/", async (req,res) => {
+  try{
+    const cafes = await Object.find();
+    res.send(cafes);
+  }
+  catch(error){
+    console.log("errors");
+  }
+  // [{"_id":"65edccc34d80fceb03c2641a","name":"Pizzahut","phone":"232174","reviewSum":0,"reviewCount":0,"__v":0},
+  // {"_id":"65edcd2757d3bec4c7702723","name":"Dominoz","phone":"334455","reviewSum":0,"reviewCount":0,"__v":0},
+  // {"_id":"65eea878782d01e8cc708db7","name":"Pizzahut","phone":"232174","reviewSum":0,"reviewCount":0,"__v":0}]
 });
 // Creating a post request , getting value from the user and doing what we want to do
 router.post("/add", async(req,res) =>{
