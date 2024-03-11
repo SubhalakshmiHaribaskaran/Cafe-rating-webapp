@@ -8,7 +8,7 @@ router.get("/", async (req,res) => {
     const cafes = await Object.find();
     res.render("home" , {
       title:"Home Page",
-      message :"Hello guys"
+      data : cafes
     });
   }
   catch(error){
