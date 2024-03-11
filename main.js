@@ -12,6 +12,8 @@ db();
 app.use(express.json());
 app.use("/",require("./routes/route"));
 
+// to use ejs template
+app.set("view engine","ejs");
 
 app.get("/test",(req,res) =>{
   res.send("Test yaaaaaaaaaaaa");
