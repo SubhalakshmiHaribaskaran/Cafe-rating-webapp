@@ -6,7 +6,9 @@ const router = express.Router();
 router.get("/", async (req,res) => {
   try{
     const cafes = await Object.find();
-    res.send(cafes);
+    res.render("home" , {
+      title:"Home Page"
+    });
   }
   catch(error){
     console.log("errors");
