@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+</head>
+<body>
+  <h1>Add A New Cafe</h1>
+  <form action="/add" method="post">
+    <!-- using /add which is in route.js and post method to get data from the user -->
+    <input type="text" name="name" placeholder="Enter the cafe's name" required>
+    <input type="text" name="phone" placeholder="Enter the cafe's phone number" required>
+    <button type="submit">Add Cafe</button>
+  </form>
+</body>
+</html>
