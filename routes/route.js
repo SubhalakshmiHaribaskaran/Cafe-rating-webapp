@@ -26,6 +26,7 @@ router.get("/add",(req,res)=>{
 })
 // Creating a post request , getting value from the user and doing what we want to do
 router.post("/add", async(req,res) =>{
+  console.log("name : "+ req.body.name);
   try{
     const cafe = new Object({
       name : req.body.name,

@@ -11,3 +11,9 @@ ID	Name	Phone	Avg Rating	Total Rating	Action
 1	Pizzahut	232174	Not yet Rated	0	Rate Now
 2	Dominoz	334455	Not yet Rated	0	Rate Now
 3	Pizzahut	232174	Not yet Rated	0	Rate Now
+Commit 34 - output
+My Cafe Home
+ID	Name	Phone	Avg Rating	Total Rating	Action
+1	Pizzahut	232174	Not yet Rated	0	Rate Now
+2	Dominoz	334455	Not yet Rated	0	Rate Now
+3	Pizzahut	232174	Not yet Rated	0	Rate NowAdd A New Cafe
