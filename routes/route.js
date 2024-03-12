@@ -44,4 +44,17 @@ router.post("/add", async(req,res) =>{
 });
 // To test this route we are using thunderclient 
 
+router.get("/rate/:id", async (req,res)=>{
+  const id = req.params.id;
+  try{
+    const cafe = await Object.findById(id);
+    res.render("rate_cafe",{
+      title : "Rate Cafe",
+      cafe : cafe
+    });
+  }catch(error){
+    console.log("Some error occured");
+  }
+})
+
 module.exports = router;
