@@ -36,6 +36,7 @@ router.post("/add", async(req,res) =>{
     });
     await cafe.save();
     console.log("Save the new cafe:"+ cafe);
+    res.redirect("/");
   }
   catch{
     console.log("Error while adding a new cafe"); 
