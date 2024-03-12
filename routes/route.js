@@ -18,6 +18,12 @@ router.get("/", async (req,res) => {
   // {"_id":"65edcd2757d3bec4c7702723","name":"Dominoz","phone":"334455","reviewSum":0,"reviewCount":0,"__v":0},
   // {"_id":"65eea878782d01e8cc708db7","name":"Pizzahut","phone":"232174","reviewSum":0,"reviewCount":0,"__v":0}]
 });
+// Creating a get method for /add
+router.get("/add",(req,res)=>{
+  res.render("add_cafe",{
+    title:"Add New Cafe"
+  });
+})
 // Creating a post request , getting value from the user and doing what we want to do
 router.post("/add", async(req,res) =>{
   try{
