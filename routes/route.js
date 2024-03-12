@@ -55,6 +55,27 @@ router.get("/rate/:id", async (req,res)=>{
   }catch(error){
     console.log("Some error occured");
   }
-})
+});
+// Creating a POST route
+router.post("/rate/:id", async (req,res)=>{
+  const id = req.params.id;
+  const rating = req.body.rating;
+  try{
+    const cafe = await Object.findById(id);
+    const newSum = cafe.reviewSum + rating;
+    const newCount = cafe.reviewCount + 1;
+    await Object.findByIdAndUpdate(id,{
+      reviewSum : newSum,
+      reviewCount : newCount
+    });
+    res.redirect("/");
+    res.render("rate_cafe",{
+      title : "Rate Cafe",
+      cafe : cafe
+    });
+  }catch(error){
+    console.log("Some error occured");
+  }
+});
 
 module.exports = router;
