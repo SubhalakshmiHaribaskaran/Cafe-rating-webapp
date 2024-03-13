@@ -59,11 +59,11 @@ router.get("/rate/:id", async (req,res)=>{
 // Creating a POST route
 router.post("/rate/:id", async (req,res)=>{
   const id = req.params.id;
-  const rating = req.body.rating;
+  const rating = parseInt(req.body.rating);
   try{
     const cafe = await Object.findById(id);
-    const newSum = cafe.reviewSum + rating;
-    const newCount = cafe.reviewCount + 1;
+    const newSum = parseInt(cafe.reviewSum) + rating;
+    const newCount = parseInt(cafe.reviewCount) + 1;
     await Object.findByIdAndUpdate(id,{
       reviewSum : newSum,
       reviewCount : newCount
